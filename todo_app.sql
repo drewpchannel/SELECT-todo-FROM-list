@@ -14,5 +14,6 @@ CREATE DATABASE todo_app;
 \c todo_app;
 
 --6
-
-\c user
+CREATE TABLE tasks(
+  id serial PRIMARY KEY
+);
