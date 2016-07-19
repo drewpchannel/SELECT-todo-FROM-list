@@ -43,3 +43,21 @@ WHERE completed_at = null;
 SELECT *
 FROM tasks
 ORDER BY created_at DESC;
+INSERT INTO tasks (title, description)
+VALUES ('mistake 1', 'a test entry');
+INSERT INTO tasks (title, description)
+VALUES ('mistake 2', 'another test entry');
+INSERT INTO tasks (title, description)
+VALUES ('third mistake', 'another test entry');
+SELECT *
+FROM tasks
+WHERE title SIMILAR TO '%mistake%';
+DELETE FROM tasks WHERE title = 'mistake 1';
+SELECT (title, description)
+FROM tasks
+WHERE title SIMILAR TO '%mistake%';
+DELETE FROM tasks
+WHERE title SIMILAR TO '%mistake%';
+SELECT *
+FROM tasks
+ORDER BY title ASC;
