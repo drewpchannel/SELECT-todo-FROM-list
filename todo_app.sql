@@ -40,3 +40,6 @@ WHERE title = 'Study SQL';
 SELECT title, description
 FROM tasks
 WHERE completed_at = null;
+SELECT *
+FROM tasks
+ORDER BY created_at DESC;
