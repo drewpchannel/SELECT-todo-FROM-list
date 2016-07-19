@@ -31,3 +31,12 @@ INSERT INTO tasks (title, description, created_at, updated_at, completed_at)
 VALUES ('Study SQL', 'Complete this exercise', now(), now(), NULL);
 INSERT INTO tasks (title, description)
 VALUES ('Study PostgreSQL', 'Read all the documentation');
+SELECT title
+FROM tasks
+WHERE completed_at = null;
+UPDATE tasks
+SET completed_at = now()
+WHERE title = 'Study SQL';
+SELECT title, description
+FROM tasks
+WHERE completed_at = null;
